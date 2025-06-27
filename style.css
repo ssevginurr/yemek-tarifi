@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #a80000; /* Kırmızı arka plan */
+  color: #333;
+}
+
+#recipe-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff0b3; /* Sarı kart */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  background-color: #a80000;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 28px;
+}
+
+#recipe-title {
+  margin: 10px 0;
+  color: #a80000;
+  font-size: 24px;
+}
+
+#recipe-image {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.section-box {
+  flex: 1;
+  background-color: #fff9d6; /* Açık sarı kutular */
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 250px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-box h3 {
+  color: #a80000;
+  margin-top: 0;
+  font-size: 20px;
+  border-bottom: 2px solid #a80000;
+  padding-bottom: 6px;
+}
+
+ul, ol {
+  text-align: left;
+  padding-left: 20px;
+}
+
+#generate-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #a80000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#generate-btn:hover {
+  background-color: #cc0000;
+}
+button[onclick="sayfayaDon()"] {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #a80000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+button[onclick="sayfayaDon()"]:hover {
+  background-color: #cc0000;
+}
+
