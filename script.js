@@ -186,4 +186,3 @@ window.addEventListener("DOMContentLoaded", function () {
 function sayfayaDon() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
