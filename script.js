@@ -120,7 +120,7 @@ const recipes = [
   },
   {
     ad: "Mercimek Köftesi",
-    resimURL: "img/mercimekköftesi.jpg",
+    resimURL: "img/mercimekkoftesi.jpg",
     malzemeler: [
       "1 su bardağı kırmızı mercimek",
       "1,5 su bardağı ince bulgur",
@@ -186,3 +186,4 @@ window.addEventListener("DOMContentLoaded", function () {
 function sayfayaDon() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
