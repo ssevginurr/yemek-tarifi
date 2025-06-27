@@ -21,7 +21,7 @@ const recipes = [
   },
   {
     ad: "Mantı",
-    resimURL: "img/mantı.jpg",
+    resimURL: "img/manti.jpg",
     malzemeler: [
       "3,5 su bardağı un",
       "1 su bardağı ılık su",
@@ -51,7 +51,7 @@ const recipes = [
   },
   {
     ad: "Çiğ Börek",
-    resimURL: "img/ciğbörek.jpg",
+    resimURL: "img/cigborek.jpg",
     malzemeler: [
       "4,5 su bardağı un",
       "2 tatlı kaşığı tuz",
@@ -72,7 +72,7 @@ const recipes = [
   },
   {
     ad: "Patates Salatası",
-    resimURL: "img/patatessalatası.jpg",
+    resimURL: "img/patatessalatasi.jpg",
     malzemeler: [
       "1-2 litre su (haşlamak için)",
       "10 adet taze patates (veya 5-6 büyük boy)",
