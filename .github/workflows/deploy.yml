@@ -1,3 +1,4 @@
+
 name: Deploy to Server
 
 on:
@@ -19,6 +20,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22                       # <-- Bu satırı buraya ekle
           script: |
             docker pull ssevginurr/yemek-tarifi:latest
             docker stop yemek-tarifi || true
