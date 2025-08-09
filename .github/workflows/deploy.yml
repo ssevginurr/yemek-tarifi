@@ -1,4 +1,3 @@
-
 name: Deploy to Server
 
 on:
@@ -8,21 +7,15 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to server via SSH
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22                       # <-- Bu satırı buraya ekle
-          script: |
-            docker pull ssevginurr/yemek-tarifi:latest
-            docker stop yemek-tarifi || true
-            docker rm yemek-tarifi || true
-            docker run -d --name yemek-tarifi -p 80:80 ssevginurr/yemek-tarifi:latest
+      - name: Deploy docker container
+        run: |
+          docker pull ssevginurr/yemek-tarifi:latest
+          docker stop yemek-tarifi || true
+          docker rm yemek-tarifi || true
+          docker run -d --name yemek-tarifi -p 80:80 ssevginurr/yemek-tarifi:latest
