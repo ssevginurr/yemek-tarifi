@@ -1,4 +1,4 @@
-name: Deploy to Server
+name: Deploy
 
 on:
   push:
@@ -6,16 +6,28 @@ on:
       - main
 
 jobs:
-  deploy:
-    runs-on: [self-hosted, Linux, X64]
+  deploy-job:
+    runs-on:
+      - self-hosted
+      - Linux
+      - X64
 
     steps:
-      - name: Checkout code
+      - name: Repo'yu checkout et
         uses: actions/checkout@v3
 
-      - name: Pull and run Docker container
-        run: |
-          docker pull ssevginurr/yemek-tarifi:latest
-          docker stop yemek-tarifi || true
-          docker rm yemek-tarifi || true
-          docker run -d --name yemek-tarifi -p 80:80 ssevginurr/yemek-tarifi:latest
+      - name: Node.js kurulumu (örnek)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Bağımlılıkları yükle
+        run: npm install
+
+      - name: Build işlemi
+        run: npm run build
+
+      - name: Deploy işlemi
+        run: echo "Deploy komutları buraya gelecek"
+
+     
