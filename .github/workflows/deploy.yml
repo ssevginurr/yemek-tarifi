@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy docker container
+      - name: Pull and run Docker container
         run: |
           docker pull ssevginurr/yemek-tarifi:latest
           docker stop yemek-tarifi || true
