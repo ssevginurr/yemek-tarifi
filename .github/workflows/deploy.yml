@@ -20,6 +20,7 @@ jobs:
         run: |
           pwd
           ls -la
+          ls -la yemek-tarifi
 
       - name: Node.js kurulumu (örnek)
         uses: actions/setup-node@v3
@@ -28,17 +29,13 @@ jobs:
 
       - name: Bağımlılıkları yükle
         run: |
-          # Eğer package.json projede kök dizindeyse direkt
+          cd yemek-tarifi
           npm install
-          # Eğer alt klasördeyse, örneğin yemek-tarifi klasörü:
-          # cd yemek-tarifi
-          # npm install
 
       - name: Build işlemi
         run: |
-          # Benzer şekilde build işlemi
+          cd yemek-tarifi
           npm run build
-          # veya cd yemek-tarifi && npm run build
 
       - name: Deploy işlemi
         run: echo "Deploy komutları buraya gelecek"
