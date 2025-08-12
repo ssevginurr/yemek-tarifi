@@ -20,11 +20,10 @@ jobs:
         run: |
           pwd
           ls -la
-          ls -la yemek-tarifi/yemek-tarifi
+          ls -la yemek-tarifi
 
       - name: Deploy işlemi
         run: |
           echo "Buraya deploy komutlarını ekle"
-          # Örneğin, scp ile dosya kopyalama:
-          # scp -r yemek-tarifi/yemek-tarifi/* user@sunucu:/var/www/html/
-
+          # Örnek:
+          # scp -r yemek-tarifi/* user@sunucu:/var/www/html/
