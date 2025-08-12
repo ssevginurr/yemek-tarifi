@@ -20,22 +20,11 @@ jobs:
         run: |
           pwd
           ls -la
-          ls -la yemek-tarifi
-
-      - name: Node.js kurulumu (örnek)
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Bağımlılıkları yükle
-        run: |
-          cd yemek-tarifi
-          npm install
-
-      - name: Build işlemi
-        run: |
-          cd yemek-tarifi
-          npm run build
+          ls -la yemek-tarifi/yemek-tarifi
 
       - name: Deploy işlemi
-        run: echo "Deploy komutları buraya gelecek"
+        run: |
+          echo "Buraya deploy komutlarını ekle"
+          # Örneğin, scp ile dosya kopyalama:
+          # scp -r yemek-tarifi/yemek-tarifi/* user@sunucu:/var/www/html/
+
